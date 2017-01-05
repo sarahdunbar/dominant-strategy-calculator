@@ -74,12 +74,19 @@ for n in range (0, totNum):
             for extra in range (num + 1, len(masterNameList)):
                 optionals[extra] = 0
     jarvais = False
-    feedback = int(input("Rating, from negative ten to ten: "))
+    danza = True
+    while danza == True:
+        feedback = int(input("Rating, from negative ten to ten: "))
+        if feedback < -10 or feedback > 10:
+            print ("From negative ten to ten!")
+        else:
+            danza = False
     probLeft, probPercent, every = probubility(probLeft, probPercent, every)
     feedback = feedback*probPercent
     elven = optionals[0]
     resultSums[elven] = resultSums[elven] + feedback
     totalSum = totalSum + feedback
+    print (" ")
 valuez = -10
 valueznum = 0
 tie = False
